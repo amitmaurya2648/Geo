@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Distance</title>
+        <script src="jquery.min.js"></script>
+        <script src="geo.js"></script>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #ffffff;
+            }
+            :root {
+            --stage-1: 25%;
+            --stage-2: 50%;
+            --stage-3: 75%;
+            --stage-4: 100%;
+            --progbar-bg: lightgray;
+            --stage-1-bg: red;
+            --stage-2-bg: orange;
+            --stage-3-bg: greenyellow;
+            --stage-4-bg: green;
+            }
+            .lblContainer{
+                margin: 6em auto 0;
+                width: 40%;
+            }
+            .distanceLbl{
+                font-size: 25px;
+                font-family:monospace;
+            }
+            .container {
+                margin: 0 auto ;
+                width: 40%;
+            }
+            .progress-bar {
+                height: 40px;
+                background: var(--progbar-bg);
+                border-radius: 30px;
+            }
+            .prog-status {
+                height: 40px;
+                width: 0%;
+                border-radius: 20px; 
+                transition: width 2s;               
+            background: red;
+            animation: 6s linear load infinite;
+            }
+            
+            @keyframes load {
+                50% {
+                    background: blue;
+                }
+                75% {
+                    background: green;
+                }
+                100% {
+                    background:red;
+                }
+            }
+            .humanContainer{
+                    margin: 1em auto;
+                    width: 40%;
+            }
+            .image {
+                width: auto;
+                height: 70px;
+                transition: margin 2s;
+            }
+            .female{
+                float: inline-end;
+            }
+            .both{
+                float: inline-end;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="lblContainer">
+            <span class="distanceLbl" id="distanceLbl"></span>
+        </div>
+        <div class="container">
+            <div class='progress-bar'>
+                <div class='prog-status' id="prog-status"></div>
+            </div>
+        </div>
+        <div class="humanContainer">
+        <img class="image male" src="male.png">
+        <img class="image female" src="female.png">
+        <img class="image both" src="both.png">
+        </div>
+    </body>
+</html>
