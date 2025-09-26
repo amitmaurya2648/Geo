@@ -90,8 +90,8 @@ function displayCalcDistance(_dist){
     lblPosition = 80;
   }
   var malePosition = _barPercentage-10;
-  if(malePosition>73){
-    malePosition = 73
+  if(malePosition>60){
+    malePosition = 60
   }
   if(_dist <0.2){
     setTimeout(function(){
