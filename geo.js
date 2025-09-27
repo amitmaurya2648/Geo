@@ -40,7 +40,7 @@ function showPosition(position) {
   const latitude = position.coords.latitude;
 
   const longitude = position.coords.longitude;
-$("#error").text(latitude,+","+ longitude);
+$("#error").text(latitude+","+ longitude);
   return ShowDistance(latitude, longitude);  
 
 }
@@ -68,6 +68,7 @@ $("#error").text("Location information is unavailable.");
 
       console.log("The request to get user location timed out.");
 $("#error").text("The request to get user location timed out.");
+getLocation();
       break;
 
     case error.UNKNOWN_ERROR:
