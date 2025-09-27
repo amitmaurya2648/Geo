@@ -1,4 +1,4 @@
-var amitLocation = '19.301415,72.875260';
+var amitLocation = '19.294144,72.858902';
 
 var arrAmitLocation =amitLocation.split(",");
 
