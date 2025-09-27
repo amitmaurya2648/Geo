@@ -61,7 +61,7 @@ $("#error").text("User denied the request for Geolocation.");
     case error.POSITION_UNAVAILABLE:
 
       console.log("Location information is unavailable.");
-$("#error").text"Location information is unavailable.");
+$("#error").text("Location information is unavailable.");
       break;
 
     case error.TIMEOUT:
