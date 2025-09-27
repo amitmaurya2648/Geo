@@ -27,7 +27,7 @@ function getLocation() {
   } else {
 
     console.log("Geolocation is not supported by this browser.");
-
+$("#error").text("Geolocation is not supported by this browser.");
   }
 
 }
@@ -55,25 +55,25 @@ function showError(error) {
     case error.PERMISSION_DENIED:
 
       console.log("User denied the request for Geolocation.");
-
+$("#error").text("User denied the request for Geolocation.");
       break;
 
     case error.POSITION_UNAVAILABLE:
 
       console.log("Location information is unavailable.");
-
+$("#error").text"Location information is unavailable.");
       break;
 
     case error.TIMEOUT:
 
       console.log("The request to get user location timed out.");
-
+$("#error").text("The request to get user location timed out.");
       break;
 
     case error.UNKNOWN_ERROR:
 
       console.log("An unknown error occurred.");
-
+$("#error").text("An unknown error occurred.");
       break;
 
   }
