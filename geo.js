@@ -40,7 +40,7 @@ function showPosition(position) {
   const latitude = position.coords.latitude;
 
   const longitude = position.coords.longitude;
-
+$("#error").text(latitude,+","+ longitude);
   return ShowDistance(latitude, longitude);  
 
 }
