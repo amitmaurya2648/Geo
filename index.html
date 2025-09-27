@@ -1,98 +1,246 @@
 <!DOCTYPE html>
-<html>
-    <head>
+
+<html><head>
+
+        <meta name="viewport" content="user-scalable=no" />
+
         <title>Distance</title>
+
         <script src="jquery.min.js"></script>
+
         <script src="geo.js"></script>
+
         <style>
-            body {
-                margin: 0;
-                padding: 0;
-                background-color:#ffffff;
-            }
+
             :root {
+
             --stage-1: 25%;
+
             --stage-2: 50%;
+
             --stage-3: 75%;
+
             --stage-4: 100%;
+
             --progbar-bg: lightgray;
+
             --stage-1-bg: red;
+
             --stage-2-bg: orange;
+
             --stage-3-bg: greenyellow;
+
             --stage-4-bg: green;
+
             }
+
+            body {
+
+                margin: 0;
+
+                padding: 0 0 0 0;
+
+                background: linear-gradient(45deg, #000428, #005bea);
+
+               
+
+            }
+
+             .parent-container {
+
+                display: flex;
+
+                align-items: center; /* Centers content vertically */
+
+                 /* Optional: Centers content horizontally as well */
+
+                min-height: 100vh; /* Ensures the parent takes up at least the full viewport height */
+
+                /* Add other styling as needed */
+
+            }
+
+            .child-container{
+
+                width: 100%;
+
+            }
+
+            .body-container{
+
+                margin: 10px 10%;
+
+                background: white;
+
+                overflow: hidden;
+
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+
+                color: #005bea;
+
+                border-radius: 2rem;
+
+            }            
+
             .lblContainer{
-                margin: 65% auto 0;
+
+                margin: 6em auto 0;
+
                 width: 70%;
+
             }
+
             .distanceLbl{
+
                 font-size: 25px;
+
                 font-family:monospace;
+
             }
+
             .container {
+
                 margin: 0 auto ;
+
                 width: 70%;
+
             }
+
             .progress-bar {
+
                 height: 80px;
+
                 background: var(--progbar-bg);
+
                 border-radius: 60px;
+
             }
+
             .prog-status {
+
                 height: 80px;
+
                 width: 0%;
-                border-radius: 40px; 
-                transition: width 2s;               
-            background: red;
-            animation: 6s linear load infinite;
-            }
-            
-            @keyframes load {
-                50% {
-                    background: blue;
-                }
-                75% {
-                    background: green;
-                }
-                100% {
-                    background:red;
-                }
-            }
+
+                border-radius: 40px;
+
+                transition: width 2s;              
+
+                background: red;
+
+                animation: 6s linear load infinite;
+
+            }                      
+
             .humanContainer{
-                    margin: 1em auto;
-                    width: 90%;
+
+                margin: 1em auto;
+
+                width: 90%;
+
+                background-image: url(female.png);
+
+                background-repeat: no-repeat;
+
+                background-size: 140px;
+
+                background-position: right top;
+
             }
+
             .image {
+
                 width: auto;
+
                 height: 140px;
+
                 transition: margin 2s;
+
             }
+
             .female{
+
                 float: inline-end;
+
             }
+
             .both{
+
                 float: inline-end;
+
                 display: none;
+
             }
+
+             @keyframes load {
+
+                50% {
+
+                    background: blue;
+
+                }
+
+                75% {
+
+                    background: green;
+
+                }
+
+                100% {
+
+                    background:red;
+
+                }
+
+            }
+
+
+ 
 
         </style>
+
     </head>
+
     <body>
-        <div class="lblContainer">
-            <span class="distanceLbl" id="distanceLbl"></span>
-        </div>
-        <div class="container">
-            <div class='progress-bar'>
-                <div class='prog-status' id="prog-status"></div>
+
+        <div class="parent-container">
+
+            <div class="child-container">
+
+                <div class="body-container">
+
+                    <div class="lblContainer">
+
+                        <span class="distanceLbl" id="distanceLbl"></span>
+
+                    </div>
+
+                    <div class="container">
+
+                        <div class="progress-bar">
+
+                            <div class="prog-status" id="prog-status"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="humanContainer">
+
+                    <img class="image male" src="male.png">
+
+                    <!-- <img class="image female" src="female.png"> -->
+
+                    <img class="image both" src="both.png">
+
+                    </div>
+
+                </div>
+
             </div>
+
         </div>
-        <div class="humanContainer">
-        <img class="image male" src="male.png">
-        <img class="image female" src="female.png">
-        <img class="image both" src="both.png">
-        </div>
-    </body>
+
+</body>
 
 </html>
-
-
